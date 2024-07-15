@@ -1,0 +1,14 @@
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_w
+
+Host github.com.personal
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_p
+  
+Host <unique.host.alias>
+  HostName <actual.host>
+  User git
+  IdentityFile ~/.ssh/<key-to-authenticate-with>
