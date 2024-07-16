@@ -36,4 +36,5 @@ install yq $installation_type
 install nmap $installation_type
 install openvpn $installation_type
 install tree $installation_type
+install bc $installation_type
 install awscli $installation_type

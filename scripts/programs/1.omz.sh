@@ -1,7 +1,7 @@
-#!/bin/zsh
+#!/bin/bash
 
 if [ -d "${HOME}/.oh-my-zsh" ]; then
-    echo "📦  Oh my zsh is already installed"
+    echo "📦 Oh my zsh is already installed"
     exit 1
 fi
 
@@ -18,12 +18,10 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 git clone https://github.com/zsh-users/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-completions
 
-source ~/.zshrc
+# Enable plugins
+sed -i 's/^plugins=(/&zsh-syntax-highlighting zsh-autosuggestions zsh-completions /' "${HOME}/.zshrc"
 
-omz plugin enable zsh-syntax-highlighting.git
-omz plugin enable zsh-autosuggestions
-omz plugin enable zsh-completions
+# Set theme
+sed -i 's/^ZSH_THEME=.*/ZSH_THEME="bira"/' "${HOME}/.zshrc"
 
-omz theme set bira
-
-echo "Please log out and log back in for the change to take effect."
+echo "Please log out and log back in for the change to take effect, or start a new zsh session now."
