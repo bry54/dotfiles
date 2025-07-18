@@ -1,12 +1,7 @@
 Host github.com
   HostName github.com
   User git
-  IdentityFile ~/.ssh/id_rsa_w
-
-Host github.com.personal
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/id_rsa_p
+  IdentityFile ~/.ssh/id_rsa
   
 Host <unique.host.alias>
   HostName <actual.host>

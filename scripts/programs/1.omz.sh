@@ -24,4 +24,4 @@ sed -i 's/^plugins=(/&zsh-syntax-highlighting zsh-autosuggestions zsh-completion
 # Set theme
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="bira"/' "${HOME}/.zshrc"
 
-echo "Please log out and log back in for the change to take effect, or start a new zsh session now."
+source "${HOME}/.zshrc"
